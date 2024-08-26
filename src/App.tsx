@@ -24,11 +24,11 @@ function App() {
   );
 
   return (
-    <>
+    <div className="text-center p-4">
+      <h1 className="text-3xl font-bold mb-2">Fruit List</h1>
       <SearchBox handleSearchInput={handleSearchInput} />
-      <h1>Fruit List</h1>
       <CardList filteredData={filteredData} />
-    </>
+    </div>
   );
 }
 
