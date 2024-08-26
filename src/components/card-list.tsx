@@ -1,10 +1,13 @@
+import convertTitleToUrl from "../lib/convertTitleToUrl";
 import { Game } from "../types.definition";
 
 export default function CardList({ filteredData }: { filteredData: Game[] }) {
   return filteredData.map(data => (
-    <div
-      key={data.id}
+    <a
       className="w-48 rounded-md p-4 border border-slate-500 shadow-md flex flex-col justify-between cursor-pointer transition duration-300 hover:bg-slate-500/40"
+      key={data.id}
+      href={convertTitleToUrl(data.title)}
+      target="_blank"
     >
       <div>
         <p className="text-xl font-bold tracking-tight">{data.title}</p>
@@ -25,6 +28,6 @@ export default function CardList({ filteredData }: { filteredData: Game[] }) {
           </span>
         </span>
       </div>
-    </div>
+    </a>
   ));
 }
