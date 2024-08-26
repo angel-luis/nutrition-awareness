@@ -14,9 +14,9 @@ function App() {
     setSearchValue(event.target.value);
   }
 
-  const filteredData = games.filter((game: Game) =>
-    game.title.toLowerCase().includes(searchValue)
-  );
+  const filteredData = games
+    .filter((game: Game) => game.title.toLowerCase().includes(searchValue))
+    .slice(0, 12);
 
   useEffect(() => {
     (async () => {
@@ -34,13 +34,21 @@ function App() {
 
   return (
     <div className="text-center p-4">
-      <h1 className="text-3xl font-bold mb-2">Videogames Critics</h1>
+      <h1 className="text-3xl font-bold mb-4">Videogames Critics</h1>
+
       <SearchBox handleSearchInput={handleSearchInput} />
+
       {games.length === 0 ? (
         <p>Loading...</p>
       ) : (
-        <CardList filteredData={filteredData} />
+        <div className="my-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-items-center">
+          <CardList filteredData={filteredData} />
+        </div>
       )}
+
+      <div>
+        <i>Data updated at 2024</i> - Made by Angel Luis
+      </div>
     </div>
   );
 }
