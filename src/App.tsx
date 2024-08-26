@@ -39,7 +39,7 @@ function App() {
   return (
     <div className="text-center p-4">
       <h1 className="text-3xl font-display mb-4 select-none transition hover:text-slate-100">
-        Videogames
+        Video Games
         <br />
         Critics
       </h1>
@@ -61,7 +61,7 @@ function App() {
         <i>Data updated at 2024</i> - Made by Angel Luis 👾{" "}
         <a
           className="text-blue-200 hover:underline"
-          href="https://github.com/angel-luis/videogames-critics"
+          href="https://github.com/angel-luis/video-games-critics"
           target="_blank"
         >
           See on Github
