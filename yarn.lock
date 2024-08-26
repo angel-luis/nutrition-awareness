@@ -610,6 +610,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node@npm:*":
+  version: 22.5.0
+  resolution: "@types/node@npm:22.5.0"
+  dependencies:
+    undici-types: "npm:~6.19.2"
+  checksum: 10c0/45aa75c5e71645fac42dced4eff7f197c3fdfff6e8a9fdacd0eb2e748ff21ee70ffb73982f068a58e8d73b2c088a63613142c125236cdcf3c072ea97eada1559
+  languageName: node
+  linkType: hard
+
+"@types/papaparse@npm:^5.3.14":
+  version: 5.3.14
+  resolution: "@types/papaparse@npm:5.3.14"
+  dependencies:
+    "@types/node": "npm:*"
+  checksum: 10c0/feb4d215903b67442feaa9836a6a5771e78dc6a9da24781e399c6f891622fa82245cd783ab2613c5be43e4a2d6a94da52325538e4485af258166864576ecd0d8
+  languageName: node
+  linkType: hard
+
 "@types/prop-types@npm:*":
   version: 15.7.12
   resolution: "@types/prop-types@npm:15.7.12"
@@ -2279,6 +2297,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"papaparse@npm:^5.4.1":
+  version: 5.4.1
+  resolution: "papaparse@npm:5.4.1"
+  checksum: 10c0/201f37c4813453fed5bfb4c01816696b099d2db9ff1e8fb610acc4771fdde91d2a22b6094721edb0fedb21ca3c46f04263f68be4beb3e35b8c72278f0cedc7b7
+  languageName: node
+  linkType: hard
+
 "parent-module@npm:^1.0.0":
   version: 1.0.1
   resolution: "parent-module@npm:1.0.1"
@@ -2958,6 +2983,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"undici-types@npm:~6.19.2":
+  version: 6.19.8
+  resolution: "undici-types@npm:6.19.8"
+  checksum: 10c0/078afa5990fba110f6824823ace86073b4638f1d5112ee26e790155f481f2a868cc3e0615505b6f4282bdf74a3d8caad715fd809e870c2bb0704e3ea6082f344
+  languageName: node
+  linkType: hard
+
 "unique-filename@npm:^3.0.0":
   version: 3.0.0
   resolution: "unique-filename@npm:3.0.0"
@@ -3011,6 +3043,7 @@ __metadata:
   resolution: "videogames-critics@workspace:."
   dependencies:
     "@eslint/js": "npm:^9.9.0"
+    "@types/papaparse": "npm:^5.3.14"
     "@types/react": "npm:^18.3.3"
     "@types/react-dom": "npm:^18.3.0"
     "@vitejs/plugin-react-swc": "npm:^3.5.0"
@@ -3019,6 +3052,7 @@ __metadata:
     eslint-plugin-react-hooks: "npm:^5.1.0-rc.0"
     eslint-plugin-react-refresh: "npm:^0.4.9"
     globals: "npm:^15.9.0"
+    papaparse: "npm:^5.4.1"
     postcss: "npm:^8.4.41"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"

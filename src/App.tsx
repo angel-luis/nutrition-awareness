@@ -1,17 +1,12 @@
-import { useState } from "react";
+import Papa from "papaparse";
+import { useEffect, useState } from "react";
 
 import CardList from "./components/card-list";
 import SearchBox from "./components/search-box";
+import { Game } from "./types.definition";
 
 function App() {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [fruits, _setFruits] = useState([
-    "apple",
-    "banana",
-    "orange",
-    "pineapple",
-    "mango",
-  ]);
+  const [games, setGames] = useState([] as Game[]);
 
   const [searchValue, setSearchValue] = useState("");
 
@@ -19,15 +14,33 @@ function App() {
     setSearchValue(event.target.value);
   }
 
-  const filteredData = fruits.filter(fruit =>
-    fruit.toLowerCase().includes(searchValue)
+  const filteredData = games.filter((game: Game) =>
+    game.title.toLowerCase().includes(searchValue)
   );
+
+  useEffect(() => {
+    (async () => {
+      const file = await fetch("dataset.csv");
+      const fileData = await file.text();
+
+      Papa.parse(fileData, {
+        header: true,
+        complete: (results: { data: Game[] }) => {
+          setGames(results.data);
+        },
+      });
+    })();
+  }, []);
 
   return (
     <div className="text-center p-4">
-      <h1 className="text-3xl font-bold mb-2">Fruit List</h1>
+      <h1 className="text-3xl font-bold mb-2">Videogames Critics</h1>
       <SearchBox handleSearchInput={handleSearchInput} />
-      <CardList filteredData={filteredData} />
+      {games.length === 0 ? (
+        <p>Loading...</p>
+      ) : (
+        <CardList filteredData={filteredData} />
+      )}
     </div>
   );
 }
