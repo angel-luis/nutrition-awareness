@@ -41,7 +41,7 @@ function App() {
       {games.length === 0 ? (
         <p>Loading...</p>
       ) : (
-        <div className="my-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-items-center">
+        <div className="my-8 grid sm:grid-cols-3 md:grid-cols-4 gap-4 justify-items-center max-w-4xl mx-auto">
           <CardList filteredData={filteredData} />
         </div>
       )}

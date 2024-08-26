@@ -20,7 +20,7 @@ export default function CardList({ filteredData }: { filteredData: Game[] }) {
               : "bg-red-200"
           }`}
         >
-          {data.meta_critic_score}
+          <span className="block w-6 h-6">{data.meta_critic_score}</span>
         </span>
       </div>
     </div>
