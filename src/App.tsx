@@ -57,8 +57,15 @@ function App() {
         </div>
       )}
 
-      <div className="font-display text-sm">
-        <i>Data updated at 2024</i> - Made by Angel Luis 👾
+      <div className="font-display text-xs">
+        <i>Data updated at 2024</i> - Made by Angel Luis 👾{" "}
+        <a
+          className="text-blue-200 hover:underline"
+          href="https://github.com/angel-luis/videogames-critics"
+          target="_blank"
+        >
+          See on Github
+        </a>
       </div>
     </div>
   );
