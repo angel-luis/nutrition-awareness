@@ -24,7 +24,7 @@ function App() {
 
   useEffect(() => {
     (async () => {
-      const file = await fetch("dataset.csv");
+      const file = await fetch("/video-games-critics/dataset.csv");
       const fileData = await file.text();
 
       Papa.parse(fileData, {
