@@ -34,7 +34,9 @@ function App() {
 
   return (
     <div className="text-center p-4">
-      <h1 className="text-3xl font-bold mb-4">Videogames Critics</h1>
+      <h1 className="text-3xl font-display mb-4 select-none transition hover:text-slate-100">
+        Videogames Critics
+      </h1>
 
       <SearchBox handleSearchInput={handleSearchInput} />
 
@@ -46,8 +48,8 @@ function App() {
         </div>
       )}
 
-      <div>
-        <i>Data updated at 2024</i> - Made by Angel Luis
+      <div className="font-display text-sm">
+        <i>Data updated at 2024</i> - Made by Angel Luis 👾
       </div>
     </div>
   );

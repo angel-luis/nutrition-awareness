@@ -1,3 +1,4 @@
+import "@fontsource/press-start-2p";
 import "./global.css";
 
 import { StrictMode } from "react";

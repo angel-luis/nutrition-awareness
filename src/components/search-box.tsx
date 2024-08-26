@@ -5,7 +5,7 @@ export default function SearchBox({
 }) {
   return (
     <input
-      className="p-2 rounded-md bg-gray-100"
+      className="p-2 rounded-md bg-gray-100 text-slate-800"
       type="text"
       placeholder="Search"
       onChange={handleSearchInput}
