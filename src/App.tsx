@@ -50,7 +50,7 @@ function App() {
       />
 
       {games.length === 0 ? (
-        <p>Loading...</p>
+        <p className="my-48 text-lg font-bold select-none">Loading games...</p>
       ) : (
         <div className="my-8 grid sm:grid-cols-3 md:grid-cols-4 gap-4 justify-items-center max-w-4xl mx-auto">
           <CardList filteredData={filteredData} />
