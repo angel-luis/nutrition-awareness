@@ -14,6 +14,10 @@ function App() {
     setSearchValue(event.target.value);
   }
 
+  function clearSearchInput() {
+    setSearchValue("");
+  }
+
   const filteredData = games
     .filter((game: Game) => game.title.toLowerCase().includes(searchValue))
     .slice(0, 12);
@@ -35,10 +39,15 @@ function App() {
   return (
     <div className="text-center p-4">
       <h1 className="text-3xl font-display mb-4 select-none transition hover:text-slate-100">
-        Videogames Critics
+        Videogames
+        <br />
+        Critics
       </h1>
 
-      <SearchBox handleSearchInput={handleSearchInput} />
+      <SearchBox
+        handleSearchInput={handleSearchInput}
+        clearSearchInput={clearSearchInput}
+      />
 
       {games.length === 0 ? (
         <p>Loading...</p>
